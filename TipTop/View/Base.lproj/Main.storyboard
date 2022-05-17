@@ -213,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="-397" y="74"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="cDs-q7-2FR">
             <objects>
-                <viewController id="lZ8-RH-9h9" sceneMemberID="viewController">
+                <viewController id="lZ8-RH-9h9" customClass="ResultsViewController" customModule="TipTop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jID-Vg-VQG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,6 +270,9 @@
                                         <integer key="value" value="13"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="lZ8-RH-9h9" eventType="touchUpInside" id="hMk-eb-A7S"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fkd-3b-kBR"/>
@@ -284,6 +287,10 @@
                             <constraint firstItem="3Cm-Wl-kFz" firstAttribute="centerX" secondItem="jID-Vg-VQG" secondAttribute="centerX" id="u8E-wR-2Lz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="uZZ-jg-3K2" id="X2l-bC-g3H"/>
+                        <outlet property="totalLabel" destination="sBd-sf-eh5" id="LZQ-iM-kU5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ut-aw-5fE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
