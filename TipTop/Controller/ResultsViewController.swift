@@ -8,23 +8,26 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
-
+    
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var calculated: Double?
-    var split: Int?
+    var split: String?
     var tip: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        totalLabel.text = String(calculated ?? 0.0)
-        descriptionLabel.text = "Split between \(split ?? 0) people, with \(tip ?? 0)% tip"
+        
+        updateUI()
     }
-
+    
     @IBAction func recalculatePressed(_ sender: UIButton) {
         dismiss(animated: true)
+    }
+    
+    func updateUI() {
+        totalLabel.text = String(calculated ?? 0.0)
+        descriptionLabel.text = "Split between \(split ?? "") people, with \(tip ?? 0)% tip"
     }
 }

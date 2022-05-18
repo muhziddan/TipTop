@@ -247,12 +247,24 @@
                                     <constraint firstAttribute="height" constant="304" id="nP4-g7-eME"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZZ-jg-3K2">
-                                <rect key="frame" x="76" y="320" width="262" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1A-GF-8ld">
+                                <rect key="frame" x="48" y="320" width="318" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZZ-jg-3K2">
+                                        <rect key="frame" x="16" y="8" width="286" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="uZZ-jg-3K2" secondAttribute="trailing" constant="8" id="2iK-HH-YYr"/>
+                                    <constraint firstItem="uZZ-jg-3K2" firstAttribute="top" secondItem="c1A-GF-8ld" secondAttribute="top" constant="8" id="80f-qL-cY5"/>
+                                    <constraint firstItem="uZZ-jg-3K2" firstAttribute="leading" secondItem="c1A-GF-8ld" secondAttribute="leadingMargin" constant="8" id="qhT-pU-ZQ5"/>
+                                    <constraint firstAttribute="height" constant="200" id="tSc-op-NTr"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cm-Wl-kFz">
                                 <rect key="frame" x="107" y="790" width="200" height="56"/>
                                 <color key="backgroundColor" red="1" green="0.62352941179999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -263,7 +275,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Calculate">
+                                <state key="normal" title="Recalculate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -279,13 +291,14 @@
                         <viewLayoutGuide key="safeArea" id="fkd-3b-kBR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="uZZ-jg-3K2" secondAttribute="trailing" constant="56" id="ADB-iN-ODF"/>
-                            <constraint firstItem="uZZ-jg-3K2" firstAttribute="leading" secondItem="jID-Vg-VQG" secondAttribute="leadingMargin" constant="56" id="ESh-bg-9ig"/>
                             <constraint firstItem="fkd-3b-kBR" firstAttribute="bottom" secondItem="3Cm-Wl-kFz" secondAttribute="bottom" constant="16" id="NO7-Ll-jYk"/>
                             <constraint firstItem="VXm-yK-moK" firstAttribute="leading" secondItem="jID-Vg-VQG" secondAttribute="leading" id="OSf-hR-QpP"/>
                             <constraint firstItem="VXm-yK-moK" firstAttribute="top" secondItem="jID-Vg-VQG" secondAttribute="top" id="Riw-Jd-Dmk"/>
-                            <constraint firstItem="uZZ-jg-3K2" firstAttribute="top" secondItem="VXm-yK-moK" secondAttribute="bottom" constant="16" id="hyH-HO-rUE"/>
+                            <constraint firstItem="c1A-GF-8ld" firstAttribute="leading" secondItem="fkd-3b-kBR" secondAttribute="leading" constant="48" id="Twz-dN-0CK"/>
                             <constraint firstAttribute="trailing" secondItem="VXm-yK-moK" secondAttribute="trailing" id="iQX-Tb-n0Q"/>
+                            <constraint firstItem="fkd-3b-kBR" firstAttribute="trailing" secondItem="c1A-GF-8ld" secondAttribute="trailing" constant="48" id="mQM-aW-Mlz"/>
+                            <constraint firstItem="3Cm-Wl-kFz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="c1A-GF-8ld" secondAttribute="bottom" id="ofT-Z1-1wH"/>
+                            <constraint firstItem="c1A-GF-8ld" firstAttribute="top" secondItem="VXm-yK-moK" secondAttribute="bottom" constant="16" id="qPE-r6-hsi"/>
                             <constraint firstItem="3Cm-Wl-kFz" firstAttribute="centerX" secondItem="jID-Vg-VQG" secondAttribute="centerX" id="u8E-wR-2Lz"/>
                         </constraints>
                     </view>

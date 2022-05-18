@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F35BBC42834C8D600617B4B /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35BBC32834C8D600617B4B /* CalculatorLogic.swift */; };
+		8F35BBC62834CC8100617B4B /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35BBC52834CC8100617B4B /* CalculatorModel.swift */; };
 		8F48532D2833D97200D25E8F /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F48532C2833D97200D25E8F /* ResultsViewController.swift */; };
 		8F6E6471282CCCF6004DDBC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6E6470282CCCF6004DDBC5 /* AppDelegate.swift */; };
 		8F6E6473282CCCF6004DDBC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6E6472282CCCF6004DDBC5 /* SceneDelegate.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F35BBC32834C8D600617B4B /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
+		8F35BBC52834CC8100617B4B /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		8F48532C2833D97200D25E8F /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		8F6E646D282CCCF6004DDBC5 /* TipTop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipTop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6E6470282CCCF6004DDBC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		8F48532B2833D93F00D25E8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8F35BBC32834C8D600617B4B /* CalculatorLogic.swift */,
+				8F35BBC52834CC8100617B4B /* CalculatorModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 			files = (
 				8F6E6475282CCCF6004DDBC5 /* CalculatorViewController.swift in Sources */,
 				8F6E6471282CCCF6004DDBC5 /* AppDelegate.swift in Sources */,
+				8F35BBC42834C8D600617B4B /* CalculatorLogic.swift in Sources */,
+				8F35BBC62834CC8100617B4B /* CalculatorModel.swift in Sources */,
 				8F6E6473282CCCF6004DDBC5 /* SceneDelegate.swift in Sources */,
 				8F48532D2833D97200D25E8F /* ResultsViewController.swift in Sources */,
 			);
