@@ -15,9 +15,10 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var twentyPercentageButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
     
-    var bill: Double?
+//    var bill: Double?
     var tip: Double?
-    var split: Double = 1.0
+    var split: Int = 1
+    var result: Double?
 
     @IBAction func tipChanged(_ sender: UIButton) {
         zeroPercentageButton.isSelected = false
@@ -35,7 +36,7 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
-        split = sender.value
+        split = Int(sender.value)
         splitNumberLabel.text = String(format: "%.0f", sender.value)
     }
     
@@ -49,11 +50,18 @@ class CalculatorViewController: UIViewController {
         }
         
         let totalBill = billDecimal * (1 + (tip ?? 0.0))
-        let afterSplit = round(totalBill / split * 100) / 100
+        result = round(totalBill / Double(split) * 100) / 100
         
-        print(tip ?? 0.0)
-        print(billTextField.text ?? "")
-        print(split)
-        print(afterSplit)
+        performSegue(withIdentifier: "goToResultsVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToResultsVC" {
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.calculated = result
+            destinationVC.split = split
+            destinationVC.tip = Int((tip ?? 0.0) * 100)
+        }
     }
 }

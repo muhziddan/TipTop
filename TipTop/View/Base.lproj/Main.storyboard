@@ -37,7 +37,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.1803921568627451" green="0.76862745098039209" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -207,11 +207,12 @@
                         <outlet property="tenPercentageButton" destination="PGF-G3-ga0" id="lQl-r5-ND9"/>
                         <outlet property="twentyPercentageButton" destination="8dy-az-NeH" id="gGx-9v-boC"/>
                         <outlet property="zeroPercentageButton" destination="EBK-Xr-bnc" id="mFH-MZ-Jrr"/>
+                        <segue destination="lZ8-RH-9h9" kind="presentation" identifier="goToResultsVC" modalPresentationStyle="fullScreen" id="nqn-zD-SM6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-397" y="74"/>
+            <point key="canvasLocation" x="-326" y="74"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="cDs-q7-2FR">
@@ -225,15 +226,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="304"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSN-F1-4xS">
-                                        <rect key="frame" x="104" y="134" width="206" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="94.5" y="134" width="225" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" red="1" green="0.62352941179999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBd-sf-eh5">
                                         <rect key="frame" x="147" y="186" width="120" height="54"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <color key="textColor" red="1" green="0.62352941179999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -247,7 +248,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZZ-jg-3K2">
-                                <rect key="frame" x="145.5" y="320" width="123.5" height="30"/>
+                                <rect key="frame" x="76" y="320" width="262" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -278,7 +279,8 @@
                         <viewLayoutGuide key="safeArea" id="fkd-3b-kBR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uZZ-jg-3K2" firstAttribute="centerX" secondItem="jID-Vg-VQG" secondAttribute="centerX" id="LlI-uQ-Srg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uZZ-jg-3K2" secondAttribute="trailing" constant="56" id="ADB-iN-ODF"/>
+                            <constraint firstItem="uZZ-jg-3K2" firstAttribute="leading" secondItem="jID-Vg-VQG" secondAttribute="leadingMargin" constant="56" id="ESh-bg-9ig"/>
                             <constraint firstItem="fkd-3b-kBR" firstAttribute="bottom" secondItem="3Cm-Wl-kFz" secondAttribute="bottom" constant="16" id="NO7-Ll-jYk"/>
                             <constraint firstItem="VXm-yK-moK" firstAttribute="leading" secondItem="jID-Vg-VQG" secondAttribute="leading" id="OSf-hR-QpP"/>
                             <constraint firstItem="VXm-yK-moK" firstAttribute="top" secondItem="jID-Vg-VQG" secondAttribute="top" id="Riw-Jd-Dmk"/>
